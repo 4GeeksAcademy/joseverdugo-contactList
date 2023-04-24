@@ -1,3 +1,45 @@
-/* 
-    General Styles
-*/
+
+.Wrapper{
+    max-width: 75rem;
+margin: auto;
+}
+
+.Contact{
+    border: 1px solid grey;
+    margin: 1rem 2rem;
+    height: 8rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.Contact-left{
+    background-color: crimson;
+    display: flex;
+    height: 8rem;
+    flex-flow: row nowrap;
+    align-self: center;
+    justify-content: space-between;
+}
+.Contact-img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Contact-info{
+    background-color: chartreuse;
+}
+.Contact-ul{}
+.Contact-li{
+    list-style: none;
+}
+.Contact-svg{}
+.Contact-address{}
+.Contact-phone{}
+.Contact-email{}
+.Contact-rigth{
+    background-color:aqua ;
+}
+.Contact-change{}
