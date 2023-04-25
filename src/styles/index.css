@@ -1,45 +1,68 @@
-
-.Wrapper{
-    max-width: 75rem;
-margin: auto;
+.Wrapper {
+  max-width: 75rem;
+  margin: auto;
 }
 
-.Contact{
-    border: 1px solid grey;
-    margin: 1rem 2rem;
-    height: 8rem;
-    display: flex;
-    flex-flow: row nowrap;
-    align-self: center;
-    justify-content: space-between;
+.Contact {
+  border: 1px solid grey;
+  width: 50rem;
+  margin: 1rem auto;
+  height: 10rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: center;
+  justify-content: space-between;
 }
 
-.Contact-left{
-    background-color: crimson;
-    display: flex;
-    height: 8rem;
-    flex-flow: row nowrap;
-    align-self: center;
-    justify-content: space-between;
+.Contact-left {
+  height: 8rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: center;
+  justify-content: space-between;
+  margin: 2rem;
 }
-.Contact-img{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    object-fit: cover;
+.Contact-img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.Contact-info{
-    background-color: chartreuse;
+
+.Contact-name{
+    margin: 0 2rem .5rem;
+    font-size: 1.2rem;
 }
-.Contact-ul{}
-.Contact-li{
-    list-style: none;
+
+.Contact-info {
+  margin: 0 2rem;
 }
-.Contact-svg{}
-.Contact-address{}
-.Contact-phone{}
-.Contact-email{}
-.Contact-rigth{
-    background-color:aqua ;
+.Contact-ul {
 }
-.Contact-change{}
+.Contact-li {
+  list-style: none;
+}
+.Contact-svg {
+  margin: 0 1rem 0 0;
+  color: grey;
+}
+.Contact-address {
+  color: grey;
+}
+.Contact-phone {
+  color: grey;
+}
+.Contact-email {
+  color: grey;
+}
+.Contact-rigth {
+  display: flex;
+  flex-flow: row nowrap;
+  align-self: flex-start;
+  justify-content: space-between
+
+}
+.Contact-change {
+    margin: 1rem;
+    cursor: pointer;
+}

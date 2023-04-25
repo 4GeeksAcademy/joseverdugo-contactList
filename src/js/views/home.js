@@ -27,7 +27,7 @@ export const Home = () => {
           <div className="Contact-left">
 			<img className="Contact-img" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
 		  <div className="Contact-info">
-			<h2>{contact.name}</h2>
+			<h2 className="Contact-name">{contact.full_name}</h2>
 			<ul className="Contact-ul">
 				<li className="Contact-li">
 					<span className="Contact-svg"><BsFillGeoAltFill/></span>
