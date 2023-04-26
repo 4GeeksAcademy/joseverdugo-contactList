@@ -29,9 +29,9 @@
   object-fit: cover;
 }
 
-.Contact-name{
-    margin: 0 2rem .5rem;
-    font-size: 1.2rem;
+.Contact-name {
+  margin: 0 2rem 0.5rem;
+  font-size: 1.2rem;
 }
 
 .Contact-info {
@@ -59,10 +59,11 @@
   display: flex;
   flex-flow: row nowrap;
   align-self: flex-start;
-  justify-content: space-between
-
+  justify-content: space-between;
 }
 .Contact-change {
-    margin: 1rem;
-    cursor: pointer;
+  margin: 1rem;
+  cursor: pointer;
 }
+
+

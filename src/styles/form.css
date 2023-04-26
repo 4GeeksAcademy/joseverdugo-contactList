@@ -1,0 +1,13 @@
+.Form {
+  max-width: 50rem;
+  width: 100%;
+  margin: auto;
+}
+
+.Form-h1 {
+  text-align: center;
+}
+
+.Form-btn {
+  width: 100%;
+}

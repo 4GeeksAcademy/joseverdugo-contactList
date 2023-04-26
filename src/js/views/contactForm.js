@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import '../../styles/form.css'
 
-export const ContactForm = () => {
+export function ContactForm() {
   const [form, setForm] = useState({
     agenda_slug: 'joseVerdugo-agenda',
     full_name: '',
@@ -30,7 +31,8 @@ export const ContactForm = () => {
   }
 
   return (
-    <>
+    <div className='Form'>
+      <h1 className='Form-h1'>Add a new contact</h1>
       <form onSubmit={updateContact}>
         <div className='mb-3'>
           <label htmlFor='exampleInputName' className='form-label'>
@@ -38,6 +40,7 @@ export const ContactForm = () => {
           </label>
           <input
             onChange={(e) => setForm({ ...form, full_name: e.target.value })}
+            placeholder='Full Name'
             type='text'
             className='form-control'
             id='exampleInputName'
@@ -49,6 +52,7 @@ export const ContactForm = () => {
           </label>
           <input
             onChange={(e) => setForm({ ...form, email: e.target.value })}
+            placeholder='Enter email'
             type='email'
             className='form-control'
             id='exampleInputEmail'
@@ -60,6 +64,7 @@ export const ContactForm = () => {
           </label>
           <input
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            placeholder='Enter phone'
             type='number'
             className='form-control'
             id='exampleInputPhone'
@@ -71,16 +76,17 @@ export const ContactForm = () => {
           </label>
           <input
             onChange={(e) => setForm({ ...form, address: e.target.value })}
+            placeholder='Enter address'
             type='text'
             className='form-control'
             id='exampleInputAddress'
           />
         </div>
-        <button type='submit' className='btn btn-primary'>
-          Submit
+        <button type='submit' className='Form-btn btn btn-primary mb-3'>
+          Save
         </button>
       </form>
       <Link to='/'>or get back to contacts</Link>
-    </>
+    </div>
   )
 }
