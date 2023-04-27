@@ -79,7 +79,7 @@ export function Home() {
             </div>
           </div>
           <div className='Contact-rigth'>
-            <Link to={`/edit/${contact.id}`}>
+            <Link className='Contact-link' to={`/edit/${contact.id}`}>
               <span className='Contact-change'>
                 <BsPencilFill />
               </span>

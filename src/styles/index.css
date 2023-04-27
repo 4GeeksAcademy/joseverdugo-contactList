@@ -61,9 +61,16 @@
   align-self: flex-start;
   justify-content: space-between;
 }
+
+.Contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .Contact-change {
   margin: 1rem;
   cursor: pointer;
 }
-
-
