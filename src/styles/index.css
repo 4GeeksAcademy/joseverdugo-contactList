@@ -1,17 +1,23 @@
 .Wrapper {
-  max-width: 75rem;
+  max-width: 50rem;
   margin: auto;
+  /* height: 90vh; */
 }
 
 .Contact {
   border: 1px solid grey;
-  width: 50rem;
+  width: 100%;
   margin: 1rem auto;
   height: 10rem;
   display: flex;
   flex-flow: row nowrap;
   align-self: center;
   justify-content: space-between;
+}
+
+.Contact-add {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .Contact-left {
@@ -73,4 +79,18 @@
 .Contact-change {
   margin: 1rem;
   cursor: pointer;
+}
+
+.Navbar-link {
+  text-decoration: none;
+}
+
+.Navbar-title {
+  font-size: 2.5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

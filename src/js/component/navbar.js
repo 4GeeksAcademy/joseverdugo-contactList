@@ -1,17 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../../styles/index.css'
 
 export const Navbar = () => {
   return (
     <nav className='navbar navbar-light bg-light mb-3'>
-      <Link to='/'>
-        <span className='navbar-brand mb-0 h1'>React Boilerplate</span>
+      <Link className='Navbar-link' to='/'>
+        <span className='Navbar-title navbar-brand mb-0 h1'>Contact-list</span>
       </Link>
-      <div className='ml-auto'>
-        <Link to='/newcontact'>
-          <button className='btn btn-primary'>Añadir Contacto</button>
-        </Link>
-      </div>
+      <div className='ml-auto'></div>
     </nav>
   )
 }

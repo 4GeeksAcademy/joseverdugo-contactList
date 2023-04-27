@@ -46,7 +46,9 @@ export function Home() {
 
   return (
     <div className='Wrapper'>
-      <h1>Contact-list</h1>
+      <Link className='Contact-add' to='/newcontact'>
+        <button className='btn btn-primary'>Add new contact</button>
+      </Link>
       {contacts.map((contact) => (
         <div className='Contact' key={contact.id}>
           <div className='Contact-left'>

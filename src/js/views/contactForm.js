@@ -7,6 +7,7 @@ import { FaIdCard } from 'react-icons/fa'
 export function ContactForm() {
   const { id } = useParams()
   const [isEditing, setIsEditing] = useState(false)
+  const [showAlert, setShowAlert] = useState(false)
 
   const [form, setForm] = useState({
     agenda_slug: 'joseVerdugo-agenda',
@@ -62,8 +63,10 @@ export function ContactForm() {
         requestOptions
       )
         .then((response) => response.json())
-        .then((result) => console.log(result, 'modo editar'))
-        .catch((error) => console.log('error', error))
+        .then((result) => {
+          setShowAlert(true)
+          console.log(result, 'modo editar')
+        })
     } else {
       var myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
@@ -77,14 +80,19 @@ export function ContactForm() {
 
       fetch('https://assets.breatheco.de/apis/fake/contact/', requestOptions)
         .then((response) => response.json())
-        .then((result) => console.log(result, 'modo añadir'))
+        .then((result) => {
+          setShowAlert(true)
+          console.log(result, 'modo añadir')
+        })
         .catch((error) => console.log('error', error))
     }
   }
 
   return (
     <div className='Form'>
-      <h1 className='Form-h1'>Add a new contact</h1>
+      <h1 className='Form-h1'>
+        {isEditing ? 'Edit Contact' : 'Add a new contact'}
+      </h1>
       <form onSubmit={updateContact}>
         <div className='mb-3'>
           <label htmlFor='exampleInputName' className='form-label'>
@@ -145,6 +153,11 @@ export function ContactForm() {
         <button type='submit' className='Form-btn btn btn-primary mb-3'>
           Save
         </button>
+        {showAlert && ( // Mostrar alerta si showAlert es verdadero
+          <div className='alert alert-success' role='alert'>
+            Contact saved successfully!
+          </div>
+        )}
       </form>
       <Link to='/'>or get back to contacts</Link>
     </div>
