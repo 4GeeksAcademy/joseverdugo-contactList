@@ -1,7 +1,6 @@
 .Wrapper {
   max-width: 50rem;
   margin: auto;
-  /* height: 90vh; */
 }
 
 .Contact {
@@ -83,6 +82,7 @@
 
 .Navbar-link {
   text-decoration: none;
+  margin: 0 2rem;
 }
 
 .Navbar-title {

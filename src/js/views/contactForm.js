@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import '../../styles/form.css'
-import { FaIdCard } from 'react-icons/fa'
+
 
 export function ContactForm() {
   const { id } = useParams()
