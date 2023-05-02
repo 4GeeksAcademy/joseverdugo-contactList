@@ -18,8 +18,6 @@ export function ContactForm() {
   })
   console.log(form)
 
-  // Vamos usar un useEffect para detectar si estamos editando un contacto. Si es así, tenemos que
-  // rellenar todos los campos del formulario con la información del contacto
   useEffect(() => {
     if (id) {
       fetch(`https://assets.breatheco.de/apis/fake/contact/${id}`)
@@ -30,9 +28,7 @@ export function ContactForm() {
           return response.json()
         })
         .then((data) => {
-          // Establezco el estado del campo Name del formulario. ESto teneis que hacerlo para los 3 campos del formulario
           setForm({
-            ...form,
             full_name: data.full_name,
             email: data.email,
             phone: data.phone,
@@ -46,6 +42,8 @@ export function ContactForm() {
 
   const updateContact = (e) => {
     e.preventDefault()
+
+    // Si hay ID modifico los datos
 
     if (isEditing) {
       var myHeaders = new Headers()
@@ -68,6 +66,8 @@ export function ContactForm() {
           console.log(result, 'modo editar')
         })
     } else {
+      // Si no añado un nuevo contacto
+
       var myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
 
@@ -153,7 +153,7 @@ export function ContactForm() {
         <button type='submit' className='Form-btn btn btn-primary mb-3'>
           Save
         </button>
-        {showAlert && ( // Mostrar alerta si showAlert es verdadero
+        {showAlert && (
           <div className='alert alert-success' role='alert'>
             Contact saved successfully!
           </div>

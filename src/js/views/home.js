@@ -14,12 +14,17 @@ export function Home() {
   const getUrl =
     'https://assets.breatheco.de/apis/fake/contact/agenda/joseVerdugo-agenda'
 
+    // fetch a la API
+
   const getAllContacts = async () => {
     const res = await fetch(getUrl)
     const data = await res.json()
     console.log(data)
     setContacts(data)
   }
+
+
+  // Eliminar contacto
 
   const deleteContact = (id) => {
     var myHeaders = new Headers()
